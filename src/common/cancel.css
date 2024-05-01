@@ -1,0 +1,58 @@
+div.no-tailwindcss {
+	all: unset !important;
+	overflow-wrap: break-word !important;
+}
+
+div.no-tailwindcss a{
+	text-decoration: underline;
+}
+
+
+div.no-tailwindcss iframe{
+	width: 100% !important;
+	/* height: auto !important; */
+	height: 400px;
+	max-height: calc(50vh + 180px);
+	border-radius: 12px;
+}
+
+
+div.no-tailwindcss img{
+	width: 100% !important;
+	max-height: calc(50vh + 180px);
+	border-radius: 12px;
+}
+
+#logo{
+	opacity: 0 !important;
+	display: none !important;
+	position: absolute;
+
+}
+
+.st-hidden{
+	opacity: 1 !important;
+}
+
+.st-logo , .st-close , .st-disclaimer{
+	opacity: 0 !important;
+}
+
+div.no-tailwindcss pre{
+	background-color: #23241f;
+    border-radius: 3px;
+	padding: 5px 10px;
+	overflow-y: auto;
+	color: #f8f8f2;
+	white-space: pre-wrap;
+	cursor: text;
+	font-size: 1rem;
+}
+
+
+.ql-toolbar{
+	position: sticky ;
+	top:0px;
+	z-index: 1000 ;
+	background-color: #fff ;
+}
