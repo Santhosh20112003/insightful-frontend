@@ -1,6 +1,6 @@
 export const blog_img_link = "http://picsum.photos/1000/200";
 export const random_login_img =
-  "https://source.unsplash.com/random/600x500/?login";
+  "http://picsum.photos/1000/200";
 export const message =
   "Exciting New Features Coming Soon to Enhance Your Blogging Experience! Stay Tuned for More Updates and Enhancements!";
 
