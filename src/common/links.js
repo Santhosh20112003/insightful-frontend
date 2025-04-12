@@ -1,4 +1,4 @@
-export const blog_img_link = "https://source.unsplash.com/random/800x300/";
+export const blog_img_link = "http://picsum.photos/1000/200";
 export const random_login_img =
   "https://source.unsplash.com/random/600x500/?login";
 export const message =
