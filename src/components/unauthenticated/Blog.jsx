@@ -8,7 +8,7 @@ import Navbar from "./parts/Navbar";
 import Request from "../../utils/Axios/config";
 import Footer from "./parts/Footer";
 import toast, { Toaster } from "react-hot-toast";
-import { InlineShareButtons } from "sharethis-reactjs";
+// import { InlineShareButtons } from "sharethis-reactjs";
 import "../../common/cancel.css";
 import RecomendationCard from "./parts/card/RecomendationCard";
 import { useUserAuth } from "../../utils/Context/UserAthenticationContext";
@@ -24,37 +24,38 @@ function Blog() {
   const [count, setCount] = useState(true);
   var speech = new SpeechSynthesisUtterance();
 
-  const shareConfig = {
-    alignment: "left",
-    color: "social",
-    enabled: true,
-    font_size: 16,
-    labels: "count",
-    language: "en",
-    networks: ["whatsapp", "linkedin", "facebook", "sharethis"],
-    padding: 12,
-    radius: 10,
-    show_total: true,
-    size: 38,
-    image:
-      "https://ik.imagekit.io/vituepzjm/Insightful%20(1).png?updatedAt=1710734251884",
-    description: `Welcome to Insightful, where your thoughts
-    meet the world! Express yourself through captivating stories, share your
-    knowledge with a global audience, and connect with like-minded individuals
-    in a creative online space. Whether you're a seasoned writer or just
-    starting out, Insightful provides the platform for your
-    voice to be heard. Start crafting your next masterpiece today!`,
-    title: "Insightful - Where Insights Blossom into Stories",
-    message: "Hi Insightful good to see your Work",
-    subject: "Hello There",
-    username: "@Santhosh202003",
-  };
+  // const shareConfig = {
+  //   alignment: "left",
+  //   color: "social",
+  //   enabled: true,
+  //   font_size: 16,
+  //   labels: "count",
+  //   language: "en",
+  //   networks: ["whatsapp", "linkedin", "facebook", "sharethis"],
+  //   padding: 12,
+  //   radius: 10,
+  //   show_total: true,
+  //   size: 38,
+  //   image:
+  //     "https://ik.imagekit.io/vituepzjm/Insightful%20(1).png?updatedAt=1710734251884",
+  //   description: `Welcome to Insightful, where your thoughts
+  //   meet the world! Express yourself through captivating stories, share your
+  //   knowledge with a global audience, and connect with like-minded individuals
+  //   in a creative online space. Whether you're a seasoned writer or just
+  //   starting out, Insightful provides the platform for your
+  //   voice to be heard. Start crafting your next masterpiece today!`,
+  //   title: "Insightful - Where Insights Blossom into Stories",
+  //   message: "Hi Insightful good to see your Work",
+  //   subject: "Hello There",
+  //   username: "@Santhosh202003",
+  // };
 
   const fetchData = async () => {
     try {
       const { data: usersData } = await supabase.from("users").select("*");
       setUsers(usersData);
-
+      console.log(usersData)
+      console.log(blogid);
       const { data: blogData, error } = await supabase
         .from("blogs")
         .select("*", {
@@ -156,7 +157,7 @@ function Blog() {
               className={`fas mt-1 ms-0.5 fa-${isSpeaking ? "pause" : "play"}`}
             ></i>
           </button>
-          <InlineShareButtons config={shareConfig} />
+          {/* <InlineShareButtons config={shareConfig} /> */}
         </span>
         <h1 className="text-3xl font-bold mb-4">{blogDetails.title}</h1>
         <div
