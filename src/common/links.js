@@ -27,13 +27,13 @@ export const jarvis_logo =
   "https://ik.imagekit.io/vituepzjm/Jarvis__1_-removebg-preview.png?updatedAt=1712814826605";
 
 export const profile_banner =
-  "https://source.unsplash.com/random/1200x200/?nature art";
+  "http://picsum.photos/1000/200/?nature art";
 
 export const background_url =
-  "https://source.unsplash.com/random/600x200/?digital";
+  "http://picsum.photos/1000/200/?digital";
 
 export const background_url2 =
-  "https://source.unsplash.com/random/600x200/?data";
+  "http://picsum.photos/1000/200/?data";
 
 export const santechapi_link =
   "https://santechapihubs.vercel.app/dashboard/hubs";
